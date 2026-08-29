@@ -204,6 +204,57 @@ a:focus-visible, button:focus-visible{
 .feature-card ul{ margin: 1em 0 0; padding-left: 1.1em; color: var(--ink-soft); }
 .feature-card li{ margin-bottom: .4em; }
 
+/* ---------- Project grid (3-up, reuses .feature-card) ---------- */
+.project-grid{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+
+/* ---------- Story timeline (departures-board style) ---------- */
+.timeline{ margin-top: 8px; }
+.timeline-row{
+  display: grid; grid-template-columns: 140px 1fr; gap: 24px;
+  padding: 22px 0;
+  border-top: 1px dashed var(--line);
+}
+.timeline-row:first-child{ border-top: none; padding-top: 6px; }
+.timeline-date{
+  font-family: var(--mono); font-size: .78rem; font-weight: 600;
+  color: var(--brand-deep); letter-spacing: .03em; padding-top: 2px;
+}
+.timeline-title{ font-size: 1.05rem; margin-bottom: .3em; }
+.timeline-desc{ color: var(--ink-soft); font-size: .95rem; margin: 0; }
+.timeline-desc a{ font-weight: 600; }
+
+/* ---------- Name breakdown ---------- */
+.breakdown{
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 20px; margin: 18px 0 8px;
+}
+.breakdown-item{ text-align: center; }
+.breakdown-letters{
+  font-family: var(--display); font-weight: 700; font-size: 1.25rem;
+  color: var(--brand); display: block;
+}
+.breakdown-word{
+  font-family: var(--mono); font-size: .66rem; text-transform: uppercase;
+  letter-spacing: .05em; color: var(--slate); display: block; margin-top: .35em;
+}
+
+/* ---------- Pull quote ---------- */
+.quote{
+  border-left: 3px solid var(--gold);
+  padding: 2px 0 2px 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: .98rem;
+}
+.quote cite{
+  display: block; margin-top: .6em; font-style: normal;
+  font-family: var(--mono); font-size: .74rem; color: var(--slate);
+}
+
 /* ---------- Boarding pass / team cards ---------- */
 .team-grid{
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
@@ -316,12 +367,18 @@ footer{
   .hero-grid{ grid-template-columns: 1fr; }
   .hero-photo{ order: -1; }
   .feature-grid{ grid-template-columns: 1fr; }
+  .project-grid{ grid-template-columns: 1fr; }
   .team-grid{ grid-template-columns: 1fr 1fr; }
   .contact-grid{ grid-template-columns: 1fr; }
+  .breakdown{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 620px){
+  .timeline-row{ grid-template-columns: 1fr; gap: 6px; }
 }
 @media (max-width: 520px){
   .team-grid{ grid-template-columns: 1fr; }
   .docs-row{ flex-direction: column; align-items: flex-start; gap: 10px; }
+  .breakdown{ grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce){
