@@ -10,6 +10,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* Small, targeted presentation fixes for the updated content. */
+:root { --link-accent: #a9b8ff; }
+.feature-card a:not(.project-title-link), .contact-list a, .footer-links a, .timeline-desc a {
+  color: #aebdff; text-decoration-color: rgba(174,189,255,.45); text-underline-offset: 3px;
+  transition: color .18s ease, text-decoration-color .18s ease;
+}
+.feature-card a:not(.project-title-link):hover, .contact-list a:hover, .footer-links a:hover, .timeline-desc a:hover {
+  color: #d9e0ff; text-decoration-color: currentColor;
+}
+.project-title-link { color: #e2e7ff; text-decoration: none; transition: color .18s ease; }
+.project-title-link:hover { color: #aebdff; text-decoration: underline; text-underline-offset: 4px; }
+.info-card-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; margin-top:2.5rem; }
+.info-card { height:100%; }
+.info-card h2 { margin:.85rem 0 .8rem; font-size:1.35rem; }
+.info-card p:last-child { margin-bottom:0; }
+.platform-grid .feature-card { min-width:0; }
+#team .team-grid { align-items:stretch; }
+#team .pass { height:100%; box-sizing:border-box; }
+@media (max-width:700px) { .info-card-grid { grid-template-columns:1fr; } }
+</style>
+
 </head>
 <body>
 
@@ -103,7 +126,7 @@
             </div>
             <div class="breakdown-item">
               <span class="breakdown-letters">DJ</span>
-              <span class="breakdown-word">Dream job</span>
+              <span class="breakdown-word">Disc jockey</span>
             </div>
             <div class="breakdown-item">
               <span class="breakdown-letters">JH</span>
@@ -120,8 +143,7 @@
             the time - he sank hours into a world called
             <a href="https://www.youtube.com/watch?v=PIsjkJ065OE&amp;t=7118s" target="_blank" rel="noopener noreferrer">H&amp;H, which he later revisited on stream</a>.
             <strong>W</strong> was win, for a belief that everyone's good
-            at their own thing. <strong>DJ</strong> was Jack's first
-            dream job, before the channel took over. <strong>JH</strong>
+            at their own thing. <strong>DJ</strong> stands for disc jockey, the job Jack dreamed of doing when he was younger. <strong>JH</strong>
             is simply his initials. And <strong>U</strong> was added at
             the end on his mum's suggestion.
           </p>
@@ -220,16 +242,16 @@
       <p>Viewer experience is at the heart of what I do. I can have up to ten projects in development at once because I want Minewdjhu to be more than somewhere to watch a stream: I want it to be a place where people can take part, contribute, and feel involved in a community. These projects support that goal, alongside my experiments in software and robotics.</p>
     </div>
     <div class="project-grid">
-      <div class="feature-card"><span class="tag">Video Automation</span><h3>Stream Shorts Automation</h3><p>Finds moments from streams, builds each clip around the stream's personality and context, adds captions, and prepares Shorts for YouTube and TikTok. The priority is making clips feel like Minewdjhu, not generic AI content.</p><p><strong>Progress:</strong> ██████░░░░ 60%</p></div>
-      <div class="feature-card"><span class="tag">Video Automation</span><h3>StreamVODAutomator: Finding The Stream Within The Stream</h3><p>Finds the strongest 10 to 40 minutes of a stream using conversation, chat, audio, and discussion, then turns that segment into a titled, described YouTube video. It asks: if someone only watched one part of this stream, what should it be?</p><p><strong>Progress:</strong> ███████░░░ 70%</p></div>
-      <div class="feature-card"><span class="tag">Stream Intelligence</span><h3>Stream Radar: Stream Production Intelligence</h3><p>Tracks games, tournaments, creator events, updates, and other streaming opportunities, syncing information between my computer and laptop through a cloud system connected to my server. It is designed to help me spot moments worth streaming.</p><p><strong>Progress:</strong> █████████░ 90%</p></div>
-      <div class="feature-card"><span class="tag">Creator Tools</span><h3>MWD Creator Command Center</h3><p>A personal operating system for Minewdjhu that brings projects, streams, goals, tasks, dates, opportunities, content planning, and external events together. Stream Radar is integrated so important opportunities can be surfaced without relying on memory alone.</p><p><strong>Progress:</strong> ██████████ 100%</p></div>
-      <div class="feature-card"><span class="tag">Operating System</span><h3>MWD OS: An Operating System Nobody Asked For</h3><p>An operating system concept intended to run on its own hardware, with a desktop, apps, games, MWD services, and deliberately unnecessary Minewdjhu features. It is an experiment in seeing how far a question like “I wonder if I could build that” can go.</p><p><strong>Progress:</strong> █░░░░░░░░░ 9%</p></div>
-      <div class="feature-card"><span class="tag">Studio Production</span><h3>Something BIG Is Coming Next Year</h3><p>A new story project set three years after the original incident, with details being kept under wraps for now. It is planned to be hosted mainly under Minewdjhu Studios and developed in partnership with SoundSightUK, with time taken to get it right.</p><p><strong>Progress:</strong> ███░░░░░░░ 30%</p></div>
-      <div class="feature-card"><span class="tag">Community Game</span><h3>The Minewdjhu Economy Stock Market Game</h3><p>A fictional Minewdjhu economy with MWD and player-created coins, profiles, leaderboards, achievements, events, changing stock charts, arcades, and casino-style games. It uses usernames and numeric PIN login rather than passwords, does not use real money, and is designed to give the community activities, events, a shop, and reasons to follow project launches.</p><p><strong>Progress:</strong> █████████░ 90%</p><p><a href="https://minewdjhu.github.io/Minewdjhu/" target="_blank" rel="noopener noreferrer">Open the MWD Stock Exchange, Casino and Arcade</a></p></div>
-      <div class="feature-card"><span class="tag">Game Development</span><h3>MWD 6: The Best GTA Spin-off Ever Made</h3><p>A deliberately ridiculous Minewdjhu-made GTA-style game with an explorable world, vehicles, missions, characters, police, radio, comedy, and a fully voice-acted cast. Even the sound effects are intended to be made by my own voice, from engines to “pew pew pew”.</p><p><strong>Progress:</strong> ██░░░░░░░░ 20%</p></div>
-      <div class="feature-card"><span class="tag">Robotics</span><h3>Vessel Bot: Yana's Remote Attendance Robot</h3><p>A mobile telepresence robot designed to let Yana remotely attend visits to Scotland, move around on specialised tracks, see through a 360-degree VR camera connected to a Meta Quest setup, and communicate with people. Its larger wooden body houses three speakers, with conduit helping keep the wiring secure.</p><p><strong>Progress:</strong> ███████░░░ 70%</p></div>
-      <div class="feature-card"><span class="tag">Robotics &amp; AI</span><h3>Project MWD 1.0: A Humanoid Learning Robot</h3><p>A roughly six-foot humanoid robot based on my Roblox avatar, Mr Robot, with working limbs and fingers. The long-term goal is for it to learn from experience, walk, interact, remember people and context, navigate, and communicate naturally using a broad collection of sensors. The ultimate goal is to make it dance.</p><p><strong>Progress:</strong> █░░░░░░░░░ 10%</p></div>
+      <div class="feature-card"><span class="tag">Video Automation</span><h3>Stream Shorts Automation</h3><p>Finds moments from streams, builds each clip around the stream's personality and context, adds captions, and prepares Shorts for YouTube and TikTok. The priority is making clips feel like Minewdjhu, not generic AI content.</p></div>
+      <div class="feature-card"><span class="tag">Video Automation</span><h3>StreamVODAutomator: Finding The Stream Within The Stream</h3><p>Finds the strongest 10 to 40 minutes of a stream using conversation, chat, audio, and discussion, then turns that segment into a titled, described YouTube video. It asks: if someone only watched one part of this stream, what should it be?</p></div>
+      <div class="feature-card"><span class="tag">Stream Intelligence</span><h3>Stream Radar: Stream Production Intelligence</h3><p>Tracks games, tournaments, creator events, updates, and other streaming opportunities, syncing information between my computer and laptop through a cloud system connected to my server. It is designed to help me spot moments worth streaming.</p></div>
+      <div class="feature-card"><span class="tag">Creator Tools</span><h3>MWD Creator Command Center</h3><p>A personal operating system for Minewdjhu that brings projects, streams, goals, tasks, dates, opportunities, content planning, and external events together. Stream Radar is integrated so important opportunities can be surfaced without relying on memory alone.</p></div>
+      <div class="feature-card"><span class="tag">Operating System</span><h3>MWD OS: An Operating System Nobody Asked For</h3><p>An operating system concept intended to run on its own hardware, with a desktop, apps, games, MWD services, and deliberately unnecessary Minewdjhu features. It is an experiment in seeing how far a question like “I wonder if I could build that” can go.</p></div>
+      <div class="feature-card"><span class="tag">Studio Production</span><h3>Something BIG Is Coming Next Year</h3><p>A new story project set three years after the original incident, with details being kept under wraps for now. It is planned to be hosted mainly under Minewdjhu Studios and developed in partnership with SoundSightUK, with time taken to get it right.</p></div>
+      <div class="feature-card"><span class="tag">Community Game</span><h3><a class="project-title-link" href="https://minewdjhu.github.io/Minewdjhu/" target="_blank" rel="noopener noreferrer">The Minewdjhu Economy Stock Market Game</a></h3><p>A fictional Minewdjhu economy with MWD and player-created coins, profiles, leaderboards, achievements, events, changing stock charts, arcades, and casino-style games. It uses usernames and numeric PIN login rather than passwords, does not use real money, and is designed to give the community activities, events, a shop, and reasons to follow project launches.</p></div>
+      <div class="feature-card"><span class="tag">Game Development</span><h3>MWD 6: The Best GTA Spin-off Ever Made</h3><p>A deliberately ridiculous Minewdjhu-made GTA-style game with an explorable world, vehicles, missions, characters, police, radio, comedy, and a fully voice-acted cast. Even the sound effects are intended to be made by my own voice, from engines to “pew pew pew”.</p></div>
+      <div class="feature-card"><span class="tag">Robotics</span><h3>Vessel Bot: Yana's Remote Attendance Robot</h3><p>A mobile telepresence robot designed to let Yana remotely attend visits to Scotland, move around on specialised tracks, see through a 360-degree VR camera connected to a Meta Quest setup, and communicate with people. Its larger wooden body houses three speakers, with conduit helping keep the wiring secure.</p></div>
+      <div class="feature-card"><span class="tag">Robotics &amp; AI</span><h3>Project MWD 1.0: A Humanoid Learning Robot</h3><p>A roughly six-foot humanoid robot based on my Roblox avatar, Mr Robot, with working limbs and fingers. The long-term goal is for it to learn from experience, walk, interact, remember people and context, navigate, and communicate naturally using a broad collection of sensors. The ultimate goal is to make it dance.</p></div>
     </div>
   </div>
 </section>
@@ -280,13 +302,13 @@
         <h3>Community Courtroom</h3>
         <p>MinewdSMP court cases turn player disputes into live, roleplay-driven events. A judge oversees proceedings while a prosecutor presents evidence, the defence responds, witnesses can be heard, and community members can serve as a jury. Screenshots and other records help build cases, and in some trials jurors vote using physical in-game items.</p>
         <p><strong>The Case of Star:</strong> Star was accused of griefing multiple bases, including William's island, and stealing Shulker boxes containing other players' armour. With Star absent, Charlie presented evidence as prosecutor. The jury voted unanimously guilty, and Star was banned.</p>
-        <p><strong>The Case of Charlie:</strong> Charlie faced accusations involving the death of his horse Dinnerbone, alleged griefing, and restricted items such as bedrock. Prosecutor Jana argued the case, while Charlie and defence lawyer Nick raised the “John Wick clause” and disputed how the rules applied. The outcome was a negotiated one-week banishment from his current zone, requiring him to relocate and establish a new settlement.</p>
+        <p><strong>The Case of Charlie:</strong> The first MinewdSMP court case to feature a practising lawyer, Nic, involved Charlie, who faced accusations involving the death of his horse Dinnerbone, alleged griefing, and restricted items such as bedrock. Prosecutor Yana argued the case, while Charlie and defence lawyer Nic, a practising lawyer, raised the “John Wick clause” and disputed how the rules applied. The outcome was a negotiated one-week banishment from his current zone, requiring him to relocate and establish a new settlement.</p>
       </div>
       <div class="feature-card">
         <span class="tag">Sagas</span>
         <h3>Server Conflicts &amp; Memorials</h3>
-        <p>Some incidents become longer-running sagas, while others bring the community together for a shared event. Crystal's repeated griefing allegations and attempts to return on alternate accounts led to immediate moderation rather than a formal conviction: repeated incidents, ban evasion, and further damage made waiting for a trial impractical. The saga remains part of the server's history, but it is only one part of a much wider community story.</p>
-        <p><strong>Horsinho the 2nd's funeral:</strong> A funeral was held for a horse who had been with the server owner from the beginning. Jack built the church, grave, and portal in four days, adjusting the design to keep it simple and in line with the owner's wishes. Guests arrived in suits and tuxedos, Jana delivered a speech remembering the horse's bravery and love of flowers and open scenery, and attendees placed flowers around the grave or into the coffin. The ceremony mixed sincere remembrance with the server's usual chaotic humour.</p>
+        <p>Some incidents become longer-running sagas, while others bring the community together for a shared event. Crystal became known for repeated griefing and attempts to return on alternate accounts. No formal conviction took place because repeated incidents, ban evasion, and further damage made immediate moderation more practical than waiting for a trial. The saga remains one part of a much wider community story.</p>
+        <p><strong>Horsinho the 2nd's funeral:</strong> A funeral was held for a horse who had been with the server owner from the beginning. Jack built the church, grave, and portal in four days, adjusting the design to keep it simple and in line with the owner's wishes. Guests arrived in suits and tuxedos, Yana delivered a speech remembering the horse's bravery and love of flowers and open scenery, and attendees placed flowers around the grave or into the coffin. The ceremony mixed sincere remembrance with the server's usual chaotic humour.</p>
       </div>
     </div>
   </div>
@@ -300,17 +322,25 @@
       <h2>Find Minewdjhu</h2>
       <p>Twitch is my preferred place to watch live. YouTube keeps the full streams and edited or segmented VODs available afterwards, while TikTok is home to short clips. The aim is to make it easy to follow along, catch up, and take part in the community.</p>
     </div>
-    <div class="project-grid">
+    <div class="project-grid platform-grid">
       <div class="feature-card"><span class="tag">Live Streaming</span><h3>Twitch</h3><p>My preferred viewing platform for live streams, chat, and community events.</p><p><a href="https://www.twitch.tv/minewdjhu" target="_blank" rel="noopener noreferrer">Watch twitch.tv/minewdjhu</a></p></div>
       <div class="feature-card"><span class="tag">Full Streams &amp; Edits</span><h3>YouTube</h3><p>Full live VODs, segmented and edited VODs, and Shorts, so you can watch a whole stream or catch the best parts.</p><p><a href="https://www.youtube.com/@minewdjhu" target="_blank" rel="noopener noreferrer">Visit YouTube @minewdjhu</a></p></div>
       <div class="feature-card"><span class="tag">Short-Form Video</span><h3>TikTok</h3><p>Short clips and highlights from streams, made for quick viewing.</p><p><a href="https://www.tiktok.com/@minewdjhuoff" target="_blank" rel="noopener noreferrer">Visit TikTok @minewdjhuoff</a></p></div>
-      <div class="feature-card"><span class="tag">Community</span><h3>Discord</h3><p>The community hub for conversation, MinewdSMP, suggestions, events, and getting involved beyond the stream.</p><p><a href="https://discord.gg/8HUw8Yy3ZR" target="_blank" rel="noopener noreferrer">Join the official Discord</a></p></div>
+      
     </div>
-    <div class="section-head" style="margin-top:2.5rem;">
-      <h2>Streaming Schedule</h2>
-      <p>Thursday, Friday, Saturday, and Monday, 8pm to 11pm UK time. From October to December, there is also a seasonal Sunday Movie Night where viewers choose the film.</p>
-      <h2>Charity Streams</h2>
-      <p>I also use my platforms to support charities through charity streams. My first charity stream took place when I had around 550 YouTube subscribers, 70 Twitch followers, and 200 TikTok followers, and raised £75 for the cause. The point is to use the community for something positive, not just entertainment.</p>
+    <div class="info-card-grid">
+      <article class="feature-card info-card">
+        <span class="tag">Live timetable</span>
+        <h2>Streaming Schedule</h2>
+        <p>Thursday, Friday, Saturday, and Monday, 8pm to 11pm UK time.</p>
+        <p>From October to December, there is also a seasonal Sunday Movie Night where viewers choose the film.</p>
+      </article>
+      <article class="feature-card info-card">
+        <span class="tag">Community impact</span>
+        <h2>Charity Streams</h2>
+        <p>I use my platforms to support charities through charity streams. During my first charity stream, I had around 550 YouTube subscribers, 70 Twitch followers, and 200 TikTok followers, and raised £75 for the cause.</p>
+        <p>The point is to use the community for something positive, not just entertainment.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -344,31 +374,36 @@
       </p>
     </div>
 
-    <div class="team-grid">\n\n      <div class="pass">
+    <div class="team-grid">
+      <div class="pass">
         <span class="code">MGT-01</span>
         <h3>Murza</h3>
         <span class="role">Networking Coordinator, Beauty Manager &amp; Social Media Editor/Promoter</span>
         <div class="divider"></div>
         <p>Builds connections, promotes my content, and manages the social media side of the team.</p>
-      </div>\n\n      <div class="pass">
+      </div>
+      <div class="pass">
         <span class="code">MGT-03</span>
         <h3>Calumn</h3>
         <span class="role">Efficiency Manager, Audience Growth Promoter &amp; Production Moderator</span>
         <div class="divider"></div>
         <p>Organises production, directs money and resources towards streams, and promotes side projects by encouraging engagement and directing people towards them.</p>
-      </div>\n\n      <div class="pass">
+      </div>
+      <div class="pass">
         <span class="code">MGT-04</span>
         <h3>Patrick</h3>
         <span class="role">Creative Development &amp; Community Engagement Manager</span>
         <div class="divider"></div>
         <p>Develops ideas for streams, videos, and additional projects that often become final content, while boosting interaction and interest across projects.</p>
-      </div>\n\n      <div class="pass">
+      </div>
+      <div class="pass">
         <span class="code">MGT-02</span>
         <h3>Yana</h3>
         <span class="role">Head of Operations &amp; Moderation</span>
         <div class="divider"></div>
         <p>Oversees the other managers, assigns tasks, organises the team, keeps me on track, and makes major organisational decisions behind the scenes while remaining technically equal to the other managers.</p>
-      </div>\n\n    </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -418,8 +453,9 @@
       <li>Managed by - Murza, Yana, Calum &amp; Pat</li>
       <li>YouTube - <a href="https://www.youtube.com/@minewdjhu" target="_blank" rel="noopener noreferrer">/minewdjhu</a></li>
       <li>Twitch - <a href="https://www.twitch.tv/minewdjhu" target="_blank" rel="noopener noreferrer">minewdjhu</a></li>
-      <li>TikTok - <a href="https://www.tiktok.com/@minewdjhu" target="_blank" rel="noopener noreferrer">@minewdjhu</a></li>
+      <li>TikTok - <a href="https://www.tiktok.com/@minewdjhuoff" target="_blank" rel="noopener noreferrer">@minewdjhuoff</a></li>
       <li>Instagram - <a href="https://www.instagram.com/minewdjhu" target="_blank" rel="noopener noreferrer">@minewdjhu</a></li>
+      <li>Discord - <a href="https://discord.gg/8HUw8Yy3ZR" target="_blank" rel="noopener noreferrer">Join the Minewdjhu community</a></li>
     </ul>
   </div>
 </section>
@@ -428,6 +464,7 @@
   <div class="wrap footer-row">
     <span>&copy; 2026 Minewdjhu Studios. All rights reserved.</span>
     <ul class="footer-links">
+      <li><a href="https://discord.gg/8HUw8Yy3ZR" target="_blank" rel="noopener noreferrer">Join the Discord</a></li>
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
     </ul>
